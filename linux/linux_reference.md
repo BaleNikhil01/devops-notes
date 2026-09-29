@@ -1,56 +1,69 @@
-File & Directory Operations
-pwd — Print current working directory path.
-ls — List directory contents (ls -la for hidden files & details).
-cd — Change directory (cd ~ for home, cd - for previous directory).
-mkdir — Create new directory (mkdir -p path/to/dir to build nested trees).
-touch — Create an empty file or update existing file timestamp.
-cp — Copy files/directories (cp -r for recursive folder copy).
-mv — Move or rename files and directories.
-rm — Remove files/directories (rm -rf to force recursive delete).
-File Viewing & Text Processing
-cat — Print entire file contents to terminal.
-less — View file page-by-page with interactive navigation (q to quit).
-head — View first $N$ lines of a file (head -n 20 file.txt).
-tail — View last $N$ lines of a file (tail -f file.log to stream live updates).
-grep — Search text patterns using regex (grep -rn "error" /var/log/).
-find — Search filesystem by attributes (find /var -name "*.log" -mtime -1).
-locate — Fast file search using a pre-built index database (updatedb to sync).
-Permissions & Ownership
-chmod — Change file read/write/execute modes (chmod 755 script.sh or chmod +x).
-chown — Change user/group ownership (chown user:group file.txt).
-Process & Resource Monitoring
-ps — Snapshot of running processes (ps aux or ps -ef).
-top — Real-time process viewer and system resource utilization.
-kill — Send signal to terminate process by PID (kill -9 PID for forced kill).
-df — Display disk space usage per filesystem (df -h for human-readable).
-du — Summarize disk usage by file/directory (du -sh *).
-free — Show total, used, and available RAM/swap memory (free -h).
-Quick Summary:
+# Day 1 — Linux Reference
 
-Need Processes? ps (snapshot) vs top (live stream)
-Need Disk Space? df (entire drive capacity) vs du (folder size)
-Need Memory? free (RAM utilization)
+## File & Directory Operations
+* **`pwd`** — Print current working directory path.
+* **`ls`** — List directory contents (`ls -la` for hidden files & details).
+* **`cd`** — Change directory (`cd ~` for home, `cd -` for previous directory).
+* **`mkdir`** — Create new directory (`mkdir -p path/to/dir` to build nested trees).
+* **`touch`** — Create an empty file or update existing file timestamp.
+* **`cp`** — Copy files/directories (`cp -r` for recursive folder copy).
+* **`mv`** — Move or rename files and directories.
+* **`rm`** — Remove files/directories (`rm -rf` to force recursive delete).
 
-Networking & Transfer
-ip — Manage network interfaces/routing (ip a for addresses, ip r for routes).
-ping — Test network connectivity/latency to a destination host.
-curl — Transfer data to/from servers via URLs (curl -I https://... for headers).
-wget — Non-interactive network file downloader.
-ssh — Connect securely to remote host (ssh -i key.pem user@host).
+## File Viewing & Text Processing
+* **`cat`** — Print entire file contents to terminal.
+* **`less`** — View file page-by-page with interactive navigation (`q` to quit).
+* **`head`** — View first N lines of a file (`head -n 20 file.txt`).
+* **`tail`** — View last N lines of a file (`tail -f file.log` to stream live updates).
+* **`grep`** — Search text patterns using regex (`grep -rn "error" /var/log/`).
+* **`find`** — Search filesystem by attributes (`find /var -name "*.log" -mtime -1`).
+* **`locate`** — Fast file search using a pre-built index database (`updatedb` to sync).
 
-What is the difference between head, tail, and cat?
-cat outputs the entire file at once. head displays the first $N$ lines, while tail displays the last $N$ lines (and can stream live updates using -f).
+## Permissions & Ownership
+* **`chmod`** — Change file read/write/execute modes (`chmod 755 script.sh` or `chmod +x`).
+* **`chown`** — Change user/group ownership (`chown user:group file.txt`).
 
-What does chmod 755 script.sh mean?
-Sets permissions to rwxr-xr-x: Owner gets Read/Write/Execute ($4+2+1=7$), while Group and Others get Read/Execute ($4+1=5$).   
-Q: How do you recursively change the ownership of a folder to appuser and group appgroup?
-chown -R appuser:appgroup /path/to/folder
+## Process & Resource Monitoring
+* **`ps`** — Snapshot of running processes (`ps aux` or `ps -ef`).
+* **`top`** — Real-time process viewer and system resource utilization.
+* **`kill`** — Send signal to terminate process by PID (`kill -9 PID` for forced kill).
+* **`df`** — Display disk space usage per filesystem (`df -h` for human-readable).
+* **`du`** — Summarize disk usage by file/directory (`du -sh *`).
+* **`free`** — Show total, used, and available RAM/swap memory (`free -h`).
 
-What is the difference between curl and wget?
+---
 
-curl is a tool to transfer data to/from servers supporting various protocols and outputs to stdout by default. wget is primarily a non-interactive file downloader that saves files directly to disk.
+### Quick Summary
+* **Need Processes?** `ps` (snapshot) vs `top` (live stream)
+* **Need Disk Space?** `df` (entire drive capacity) vs `du` (folder size)
+* **Need Memory?** `free` (RAM utilization)
 
-grep vs find 
-grep Searches inside files for text patterns(content)  eg. grep -rn "ERROR" /var/log/
-find Searches filesystem for files/folders by name, size, owner, or date(Metadata)  eg. find /var/log -name "*.log" -mtime -1
-Rule of Thumb: Use find to locate the file, and grep to read what's inside it. 
+---
+
+## Networking & Transfer
+* **`ip`** — Manage network interfaces/routing (`ip a` for addresses, `ip r` for routes).
+* **`ping`** — Test network connectivity/latency to a destination host.
+* **`curl`** — Transfer data to/from servers via URLs (`curl -I https://...` for headers).
+* **`wget`** — Non-interactive network file downloader.
+* **`ssh`** — Connect securely to remote host (`ssh -i key.pem user@host`).
+
+---
+
+## Core Q&A
+
+* **What is the difference between `head`, `tail`, and `cat`?**
+  * `cat` outputs the entire file at once. `head` displays the first N lines, while `tail` displays the last N lines (and can stream live updates using `-f`).
+
+* **What does `chmod 755 script.sh` mean?**
+  * Sets permissions to `rwxr-xr-x`: Owner gets Read/Write/Execute ($4+2+1=7$), while Group and Others get Read/Execute ($4+1=5$).
+
+* **How do you recursively change the ownership of a folder to `appuser` and group `appgroup`?**
+  * `chown -R appuser:appgroup /path/to/folder`
+
+* **What is the difference between `curl` and `wget`?**
+  * `curl` is a tool to transfer data to/from servers supporting various protocols and outputs to stdout by default. `wget` is primarily a non-interactive file downloader that saves files directly to disk.
+
+* **`grep` vs `find`**
+  * **`grep`:** Searches inside files for text patterns/content (e.g., `grep -rn "ERROR" /var/log/`).
+  * **`find`:** Searches filesystem for files/folders by name, size, owner, or date metadata (e.g., `find /var/log -name "*.log" -mtime -1`).
+  * **Rule of Thumb:** Use `find` to locate the file, and `grep` to read what's inside it.
