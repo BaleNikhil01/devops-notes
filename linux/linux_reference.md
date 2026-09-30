@@ -76,13 +76,12 @@
 * Process → is a running instance of a program.(python app.py) Once running, Linux creates a process with a PID.
 * Service → A long-running background process managed by the OS/service manager. A service usually has lifecycle management such as start, stop, restart and boot startup. (systemctl status nginx)
 
-*  **What is 'PATH' **
-*  ** PATH tells Linux which directories to search when you execute a command. 'echo $PATH' **
+*  What is 'PATH' **  PATH tells Linux which directories to search when you execute a command. 'echo $PATH' 
 
-*   ** Package management**
+*   Package management
    *  How do you install software on Ubuntu? --> using 'apt' (apt update- It refreshes the local package index so apt knows about the latest package/upgrade-Upgrade installed packages/install/remove)
      
-* ** '/etc' - Contains system and application configuration files. troubleshooting frequently involves /etc /etc/ssh/ /etc/nginx/ **
-*  ** '/var' - Contains variable data such as logs, caches  /var/log/ **
+*  '/etc' - Contains system and application configuration files. troubleshooting frequently involves /etc /etc/ssh/ /etc/nginx/ 
+*   '/var' - Contains variable data such as logs, caches  /var/log/ 
 
 * ** Need revision --> permission and ownership/grep vs find / process vs service **
