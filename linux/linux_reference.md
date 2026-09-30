@@ -16,7 +16,7 @@
 * **`head`** — View first N lines of a file (`head -n 20 file.txt`).
 * **`tail`** — View last N lines of a file (`tail -f file.log` to stream live updates).
 * **`grep`** — Search text patterns using regex (`grep -rn "error" /var/log/`).
-* **`find`** — Search filesystem by attributes (`find /var -name "*.log" -mtime -1`).
+* **`find`** — Search filesystem by filetypes (`find /var -name "*.log" -mtime -1`).
 * **`locate`** — Fast file search using a pre-built index database (`updatedb` to sync).
 
 ## Permissions & Ownership
@@ -28,7 +28,7 @@
 * **`top`** — Real-time process viewer and system resource utilization.
 * **`kill`** — Send signal to terminate process by PID (`kill -9 PID` for forced kill).
 * **`df`** — Display disk space usage per filesystem (`df -h` for human-readable).
-* **`du`** — Summarize disk usage by file/directory (`du -sh *`).
+* **`du`** — Summarize disk usage of file/directory (`du -sh *`).
 * **`free`** — Show total, used, and available RAM/swap memory (`free -h`).
 
 ---
@@ -44,7 +44,7 @@
 * **`ip`** — Manage network interfaces/routing (`ip a` for addresses, `ip r` for routes).
 * **`ping`** — Test network connectivity/latency to a destination host.ping uses ICMP.
 * **`curl`** — curl is commonly used to make HTTP requests and test APIs/endpoints.Useful for checking whether an application is responding.
-* **`wget`** — Non-interactive network file downloader, commonly used to download files from URLs.
+* **`wget`** — Non-interactive downloader commonly used to download large files from URLs to local disk.
 * **`ssh`** — Connect securely to remote host (`ssh -i key.pem user@host`).
 
 ## Services and Logs 
@@ -75,3 +75,5 @@
 * **What is the difference between a process and a service?**
 * **Process → is a running instance of a program.(python app.py) Once running, Linux creates a process with a PID.
 * **Service → A long-running background process managed by the OS/service manager. A service usually has lifecycle management such as start, stop, restart and boot startup. (systemctl status nginx)
+
+* ** Need revision --> permission and ownership/grep vs find / process vs service **
