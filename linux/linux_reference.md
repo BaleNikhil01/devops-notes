@@ -79,7 +79,7 @@
 *  What is 'PATH' **  PATH tells Linux which directories to search when you execute a command. 'echo $PATH' 
 
 *   Package management
-   *  How do you install software on Ubuntu? --> using 'apt' (apt update- It refreshes the local package index so apt knows about the latest package/upgrade-Upgrade installed packages/install/remove)
+   *  How do you install software on Ubuntu? --> using **'apt'** (apt update- It refreshes the local package index so apt knows about the latest package/upgrade-Upgrade installed packages/install/remove)
      
 *  '/etc' - Contains system and application configuration files. troubleshooting frequently involves /etc /etc/ssh/ /etc/nginx/ 
 *   '/var' - Contains variable data such as logs, caches  /var/log/ 
