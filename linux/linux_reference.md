@@ -42,11 +42,15 @@
 
 ## Networking & Transfer
 * **`ip`** — Manage network interfaces/routing (`ip a` for addresses, `ip r` for routes).
-* **`ping`** — Test network connectivity/latency to a destination host.
-* **`curl`** — Transfer data to/from servers via URLs (`curl -I https://...` for headers).
-* **`wget`** — Non-interactive network file downloader.
+* **`ping`** — Test network connectivity/latency to a destination host.ping uses ICMP.
+* **`curl`** — curl is commonly used to make HTTP requests and test APIs/endpoints.Useful for checking whether an application is responding.
+* **`wget`** — Non-interactive network file downloader, commonly used to download files from URLs.
 * **`ssh`** — Connect securely to remote host (`ssh -i key.pem user@host`).
 
+## Services and Logs 
+* **'systemctl'** - Used to manage services controlled by systemd.(status/start/stop/restart/enable) eg. 'systemctl status nginx'
+* **'journalctl'** - Used to view logs collected by systemd. eg. 'journalctl -u nginx'
+  
 ---
 
 ## Core Q&A
@@ -67,3 +71,7 @@
   * **`grep`:** Searches inside files for text patterns/content (e.g., `grep -rn "ERROR" /var/log/`).
   * **`find`:** Searches filesystem for files/folders by name, size, owner, or date metadata (e.g., `find /var/log -name "*.log" -mtime -1`).
   * **Rule of Thumb:** Use `find` to locate the file, and `grep` to read what's inside it.
+
+* **What is the difference between a process and a service?**
+  *Process → is a running instance of a program.(python app.py) Once running, Linux creates a process with a PID.
+  *Service → A long-running background process managed by the OS/service manager. A service usually has lifecycle management such as start, stop, restart and boot startup. (systemctl status nginx)
