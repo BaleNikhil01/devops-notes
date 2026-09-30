@@ -73,5 +73,5 @@
   * **Rule of Thumb:** Use `find` to locate the file, and `grep` to read what's inside it.
 
 * **What is the difference between a process and a service?**
-  *Process → is a running instance of a program.(python app.py) Once running, Linux creates a process with a PID.
-  *Service → A long-running background process managed by the OS/service manager. A service usually has lifecycle management such as start, stop, restart and boot startup. (systemctl status nginx)
+* **Process → is a running instance of a program.(python app.py) Once running, Linux creates a process with a PID.
+* **Service → A long-running background process managed by the OS/service manager. A service usually has lifecycle management such as start, stop, restart and boot startup. (systemctl status nginx)
