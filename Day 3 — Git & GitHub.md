@@ -186,6 +186,22 @@ Integrate them into current branch
 
 ---
 
+For a completely new local repo, the usual sequence is:
+
+git init
+   ↓
+git remote add origin <URL>
+   ↓
+git fetch origin      (only downlaods remote to local but deosnot merge)
+   ↓
+git pull origin main --allow-unrelated-histories   (do this if your local repo was already connected to that remote)
+   ↓
+git add .
+   ↓
+git commit
+   ↓
+git push
+
 # Interview Scenarios
 
 ### Q1. Git vs GitHub?
