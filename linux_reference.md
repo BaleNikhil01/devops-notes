@@ -64,7 +64,7 @@
   * `chown -R appuser:appgroup /path/to/folder`
 
 * **What is the difference between `curl` and `wget`?**
-  * `curl` is a tool to transfer data to/from servers supporting various protocols and outputs to stdout by default. `wget` is primarily a non-interactive file downloader that saves files directly to disk.
+  * `curl` is a tool to transfer data to/from servers supporting various protocols to check whether application is responding. `wget` is primarily a non-interactive file downloader that saves files directly to disk.
 
 * **`grep` vs `find`**
   * **`grep`:** Searches inside files for text patterns/content (e.g., `grep -rn "ERROR" /var/log/`).
