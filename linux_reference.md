@@ -17,7 +17,6 @@
 * **`tail`** — View last N lines of a file (`tail -f file.log` to stream live updates).
 * **`grep`** — Search text patterns using regex (`grep -rn "error" /var/log/`).
 * **`find`** — Search filesystem by filetypes (`find /var -name "*.log" -mtime -1`).
-* **`locate`** — Fast file search using a pre-built index database (`updatedb` to sync).
 
 ## Permissions & Ownership
 * **`chmod`** — Change file read/write/execute modes (`chmod 755 script.sh` or `chmod +x`).
