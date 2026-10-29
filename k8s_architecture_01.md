@@ -39,6 +39,15 @@ So how does another application reliably communicate with it? **Service.**
 
 The Service provides a stable way to reach a group of Pods.
 
+Common Service types include:
+
+-   **ClusterIP** --- exposes the Service inside the cluster; this is
+    the default.
+-   **NodePort** --- exposes the Service on a port on each node.
+-   **LoadBalancer** --- requests an external load balancer from a
+    supported environment.
+
+
 ## ConfigMap
 
 Applications need configuration.
@@ -96,6 +105,10 @@ example.com/shop
       ▼
    Service B
 ```
+An Ingress resource requires an **Ingress controller** to implement its
+rules. Creating an Ingress object alone does not automatically make the
+application reachable from the internet.
+
 
 ## Volume
 
@@ -124,7 +137,17 @@ Deployment manages the desired number of Pods through a ReplicaSet, the Schedule
 
 ## What happens when you create a Deployment?
 
-Kubernetes creates a ReplicaSet for the Deployment, and the ReplicaSet creates the required number of Pods.
+1.  The Kubernetes API server validates and stores the requested
+    resource.
+2.  The Deployment controller creates or updates a ReplicaSet.
+3.  The ReplicaSet controller creates Pods to reach the desired replica
+    count.
+4.  The scheduler assigns each unscheduled Pod to a suitable node.
+5.  The kubelet on each selected node works with the container runtime
+    to start the containers.
+6.  Kubernetes controllers continue reconciling the actual state with
+    the desired state.
+
 
 ## Useful Commands
 
