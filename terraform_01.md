@@ -441,24 +441,5 @@ Public IP
 
 ---
 
-# 12. Hands-on Proof
-
-This project was implemented and verified manually in AWS using Terraform.
-
-### 1. Terraform + AWS Architecture
-
-![Terraform AWS architecture](01-terraform-aws-architecture.png)
-
-### 2. EC2 Created by Terraform
-
-The EC2 instance was successfully created in `ap-south-1a` with a public IPv4 address.
-
-![EC2 created by Terraform](02-ec2-created-by-terraform.png)
-
-### 3. VPC Resource Map
-
-The AWS VPC Resource Map confirms the VPC, subnet, route table, and Internet Gateway/network connection created for the project.
-
-![VPC resource map](03-vpc-resource-map.png)
 
 

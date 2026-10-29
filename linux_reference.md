@@ -17,7 +17,6 @@
 * **`tail`** — View last N lines of a file (`tail -f file.log` to stream live updates).
 * **`grep`** — Search text patterns using regex (`grep -rn "error" /var/log/`).
 * **`find`** — Search filesystem by filetypes (`find /var -name "*.log" -mtime -1`).
-* **`locate`** — Fast file search using a pre-built index database (`updatedb` to sync).
 
 ## Permissions & Ownership
 * **`chmod`** — Change file read/write/execute modes (`chmod 755 script.sh` or `chmod +x`).
@@ -65,7 +64,7 @@
   * `chown -R appuser:appgroup /path/to/folder`
 
 * **What is the difference between `curl` and `wget`?**
-  * `curl` is a tool to transfer data to/from servers supporting various protocols and outputs to stdout by default. `wget` is primarily a non-interactive file downloader that saves files directly to disk.
+  * `curl` is a tool to transfer data to/from servers supporting various protocols to check whether application is responding. `wget` is primarily a non-interactive file downloader that saves files directly to disk.
 
 * **`grep` vs `find`**
   * **`grep`:** Searches inside files for text patterns/content (e.g., `grep -rn "ERROR" /var/log/`).
